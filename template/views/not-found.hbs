@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Sorry {{#if isSubPage}}{{errMsg}} article{{else}}page{{/if}} not found</p>
+        {{!-- There is no JS like ternary operator which we can use inside template parsers, so we have to wrote like above. Check for more suhc sytaxes in details --}}
+    </div>
+
+    {{>footer}}
+</body>
+</html>
