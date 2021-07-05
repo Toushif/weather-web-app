@@ -11,6 +11,7 @@ import { hasSubscribers } from 'diagnostic_channel';
 
 //normally we run nodemon dist/app.js which actually just checks for js file changes and re-compiles evrytime something is changed. Nut if we change other files like .hbs or some other extentions then nodemon wont pick it up. For that we need to run "nodemon dist/app.js e js,hbs" and like this we can provied all the extentions we need to check for changes
 
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -103,6 +104,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}.`)
 })
