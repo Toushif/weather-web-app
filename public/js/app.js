@@ -1,4 +1,3 @@
-"use strict";
 console.log('Web with Node is working.');
 const callWeatherAPI = (location) => {
     messageOne.textContent = 'Loading...';
@@ -24,6 +23,7 @@ const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
 messageOne.textContent = '';
 messageTwo.textContent = '';
+
 weatherForm.addEventListener('submit', event => {
     event.preventDefault();
     callWeatherAPI(inputIocation.value);

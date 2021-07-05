@@ -31,6 +31,7 @@ const geocode_1 = __importDefault(require("./utils/geocode"));
 // console.log(__dirname) //this prints the entire folder of your destination or outDir folder, i.e, dist or src which is configured in outDir in tsconfig.json, if tsconfig is not there then it is usually the src folder
 // console.log(__filename) //this prints the entire filepath of your destination or outDir file, i.e, file inside dist or src which is configured in outDir in tsconfig.json
 //normally we run nodemon dist/app.js which actually just checks for js file changes and re-compiles evrytime something is changed. Nut if we change other files like .hbs or some other extentions then nodemon wont pick it up. For that we need to run "nodemon dist/app.js e js,hbs" and like this we can provied all the extentions we need to check for changes
+const port = process.env.PORT || 3000;
 const app = express_1.default();
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsDirectory = path.join(__dirname, '../template/views'); //express will look into 'views' folder by default to render hbs(handlebars) templates. So if we use any other name other than views then it'll throw error. So for setting custom name we can set the path of the views folder (or whatever name we give - in our case it is templates) - we set the path for tat here.
@@ -109,6 +110,6 @@ app.get('*', (req, res) => {
         name: 'Toushif UL Haque',
     });
 });
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}.`);
 });
