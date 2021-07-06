@@ -68,10 +68,6 @@ p a.github-link:hover, a.mail-link:hover {
     font-weight: bold;
 }
 
-p.about-body, p.help-body, p.home-body {
-    font-family: cursive;
-}
-
 .portrait {
     width: 250px;
 }
