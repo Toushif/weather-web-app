@@ -25,7 +25,7 @@ const getLocation = (lat, lon, callback) => {
                 data,
                 wind_speed: `Wind speed:<b> ${wind_speed} km/hr</b>`,
                 wind_degree: `Wind degree:<b> ${wind_degree}</b>`,
-                wind_dir: `Wind direction:<b> ${windDir[wind_dir]}</b>`,
+                wind_dir: `Wind direction:<b> ${windDir[wind_dir] || wind_dir}</b>`,
                 pressure: `Atmospheric pressure:<b> ${pressure} millibar</b>`,
                 precip: `Precipitation:<b> ${precip} millimeters</b>`,
                 humidity: `Humidity:<b> ${humidity}%</b>`,
