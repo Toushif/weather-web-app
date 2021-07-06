@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "dev": "nodemon dist/app.js -e js,hbs,ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@types/express": "^4.17.12",
     "@types/hbs": "^4.0.1",
-    "@types/node": "^15.14.0"
+    "@types/node": "^15.14.0",
+    "nodemon": "^2.0.9"
   }
 }
