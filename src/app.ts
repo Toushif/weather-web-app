@@ -33,7 +33,7 @@ app.use(json()); //here we always parse the data to json using json from body-pa
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Main',
+        title: 'Your weather',
         name: 'Toushif UL Haque'
     })
 })
@@ -49,7 +49,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name: 'Toushif UL Haque',
-        help: 'This is the help text'
+        help: 'For any help on this weather app check my Github repository'
     })
 })
 

@@ -27,14 +27,49 @@ header {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 58px;
     margin-bottom: 16px;
+}
+
+header .menu-bar {
+    margin-left: -6px;
 }
 
 header a {
     color: #888888;
-    margin-right: 16px;
+    margin-right: 12px;
+    padding: 6px;
     text-decoration: none;
+}
+
+header a:hover {
+    background: #ddd;
+}
+
+header a.active {
+    border-bottom: 4px solid #aaa;
+}
+
+p a.github-link, a.mail-link {
+    text-decoration: none;
+    font-style: oblique;
+}
+
+a.toushif-link {
+    text-decoration: none;
+    color: #6161d7;
+}
+
+a.toushif-link:hover {
+    text-decoration: underline;
+}
+
+p a.github-link:hover, a.mail-link:hover {
+    font-weight: bold;
+}
+
+p.about-body, p.help-body, p.home-body {
+    font-family: cursive;
 }
 
 .portrait {
@@ -56,4 +91,13 @@ form button {
 
 form button:hover {
     background:#555;
+}
+
+section.weather-report {
+    background: rgb(247, 247, 247);
+}
+
+p#time {
+    margin-top: 2rem;
+    font-style: oblique;
 }

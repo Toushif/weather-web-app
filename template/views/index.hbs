@@ -14,17 +14,33 @@
     <div class="main-content">
         {{>header}}
 
-        <p>Use this site to get your weather!</p>
+        <p class="home-body">Use this site to get your weather!</p>
 
         <form action="submit">
             <input type="text" name="location" id="location" placeholder="Location">
             <button type="submit">Submit</button>
         </form>
-
-        <p id="message-1"></p>
-        <p id="message-2"></p>
+        <section class="weather-report">
+            <p id="place"></p>
+            <p id="data"></p>
+            <p id="wind_speed"></p>
+            <p id="wind_degree"></p>
+            <p id="wind_dir"></p>
+            <p id="pressure"></p>
+            <p id="precip"></p>
+            <p id="humidity"></p>
+            <p id="cloudcover"></p>
+            <p id="uv_index"></p>
+            <p id="visibility"></p>
+        </section>
+        <p id="time"></p>
     </div>
 
     {{>footer}}
+
+    <script>
+        var current = document.getElementsByClassName("home");
+        current[0] ? current[0].className = "active" : '';
+    </script>
 </body>
 </html>
