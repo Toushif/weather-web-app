@@ -54,7 +54,7 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-    //req,query is the is our req parameter which we send through the url follwed by question mark or through client end as rquenst params
+    //req.query is the is our req parameter which we send through the url follwed by question mark or through client end as rquenst params
     const query = req.query.address as string
     if(!query) {
         //here you have to use return statement so that the execution stops, or else again Node will go to next res.send and again send data which is invaid and throw error
@@ -68,14 +68,12 @@ app.get('/weather', (req, res) => {
             return res.send({
                 error: error
             })
-            return
         }
         getLocation(data?.lat as number, data?.lon as number, (error, forcast) => {
             if(error) {
                 return res.send({
                     error: error
                 })
-                return
             }
     
             res.send({
