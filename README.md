@@ -7,4 +7,4 @@ This web app is made using NodeJS with TypeScript and Express.
 The app demo - https://weather-web-node.herokuapp.com/ 
 
 Have any question or suggestion? 
-Drop a quick mail to - toushif.haq@gmail.com
+Drop a quick mail to - toushif.haq@gmail.com 
