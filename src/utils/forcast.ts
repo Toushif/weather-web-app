@@ -1,7 +1,7 @@
 import request from 'postman-request';
 
-type undStr = undefined | string
-type cbObj = { 
+type UndStr = undefined | string
+type CbObj = { 
     data: string,
     wind_speed: string,
     wind_degree: string,
@@ -13,7 +13,7 @@ type cbObj = {
     uv_index: string,
     visibility: string
 }
-type resType = { 
+type ResType = { 
     body: { 
         error: any; 
         current: { 
@@ -32,10 +32,10 @@ type resType = {
         };
         };
     }
-type args = (s: undStr, o: cbObj | undefined) => void;
+type args = (s: UndStr, o: CbObj | undefined) => void;
 const getLocation = (lat: number, lon: number, callback: args) => {
     const url = 'http://api.weatherstack.com/current?access_key=450b0a90868807a4aecb625af805d715&query=';
-    request({ url: url+lat+','+lon, json: true }, (error: string | undefined, response: resType) => {
+    request({ url: url+lat+','+lon, json: true }, (error: string | undefined, response: ResType) => {
         if(response && !response.body.error) {
             // console.log("Response-", response.body.current);
             let feelText = " but it feels like ";
@@ -44,10 +44,10 @@ const getLocation = (lat: number, lon: number, callback: args) => {
             }
             let data = 'Situation: <b>It\'s ' + response.body.current.weather_descriptions[0] + ". The official temperature is " + response.body.current.temperature + " degree Celsius " + feelText + response.body.current.feelslike + " degree Celsius.</b>"
             const { wind_speed, wind_degree, wind_dir, pressure, precip, humidity, cloudcover, uv_index, visibility } = response.body.current;
-            interface windIntf {
+            interface WindIntf {
                 [property: string]: string;
             }
-            const windDir: windIntf = {
+            const windDir: WindIntf = {
                 S: 'South',
                 N: 'North',
                 W: 'West',
